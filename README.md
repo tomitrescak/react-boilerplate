@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Dependencies
+
+BabelEdit for editing internationalisation strings
+
 ## Available Scripts
 
 In the project directory, you can run:
