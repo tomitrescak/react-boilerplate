@@ -1,7 +1,8 @@
-import * as React from 'react';
-export interface IButtonProps {
+import React from 'react';
+
+export interface ButtonProps {
   children?: React.ReactNode;
-  onClick?: (e: any) => void;
+  onClick?: (e: unknown) => void;
 }
 const styles = {
   border: '1px solid #eee',
@@ -12,7 +13,8 @@ const styles = {
   padding: '3px 10px',
   margin: 10
 };
-const Button: React.SFC<IButtonProps> = props => (
+
+const Button: React.SFC<ButtonProps> = props => (
   <button onClick={props.onClick} style={styles} type="button">
     {props.children}
   </button>
