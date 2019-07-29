@@ -7,7 +7,7 @@ import Button from '../button';
 import { languageDecorator } from '../../stories/common';
 
 storiesOf('Components/Button', module)
-  .addDecorator(languageDecorator)
+  // .addDecorator(languageDecorator)
   .addParameters({
     info: 'Global story text'
   })
