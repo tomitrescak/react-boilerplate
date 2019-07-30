@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import { useTranslation, Trans } from 'react-i18next';
 
-import '../../i18n/index';
-
 export interface ButtonProps {
   /**
    * Text of the button

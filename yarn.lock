@@ -10417,7 +10417,7 @@ react@^0.14.0:
     envify "^3.0.0"
     fbjs "^0.6.1"
 
-react@^16.8.3, react@^16.8.6:
+react@^16.8.1, react@^16.8.3, react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.npmjs.org/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
@@ -11445,6 +11445,16 @@ store2@^2.7.1:
   version "2.8.0"
   resolved "https://registry.npmjs.org/store2/-/store2-2.8.0.tgz#032d5dcbd185a5d74049d67a1765ff1e75faa04b"
   integrity sha512-FBJpcOEZQLZBIGL4Yp7W5RgZ0ejaURmcfUjIpyOb64BpI8z/iJXw7zd/NTBeq304dVMxuWVDZEUUCGn7llaVrA==
+
+storybook-addon-i18n@^5.1.9:
+  version "5.1.9"
+  resolved "https://registry.npmjs.org/storybook-addon-i18n/-/storybook-addon-i18n-5.1.9.tgz#773c6b525fce9b1e98e98f7abd0198844013c196"
+  integrity sha512-a7bogIWbJbpbXUziVoUp5Pw3SiXXmgZDc4kxwE5aLPhAWj5tjuQsemq5la5n5zsBTbawT1s2XLRo578vzn9Mng==
+  dependencies:
+    "@storybook/addons" "5.1.9"
+    "@storybook/client-api" "5.1.9"
+    "@storybook/components" "5.1.9"
+    react "^16.8.1"
 
 stream-browserify@^2.0.1:
   version "2.0.2"

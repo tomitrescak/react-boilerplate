@@ -6,7 +6,7 @@ import { withInfo } from '@storybook/addon-info';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import { languageDecorator } from './i18decorator';
+import { i18Decorator } from './addon-i18n/decorator';
 
 const req = require.context('../src/components', true, /.stories.tsx$/);
 function loadStories() {
@@ -20,6 +20,6 @@ addDecorator(
     header: false
   })
 );
-addDecorator(languageDecorator);
 addDecorator(withA11y);
 addDecorator(withKnobs);
+addDecorator(i18Decorator);
