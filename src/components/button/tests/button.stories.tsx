@@ -2,23 +2,27 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
-import { withI18n } from 'storybook-addon-i18n';
 
 import Button from '../button';
 
+import ButtonDocs from './button.docs.md';
+import ButtonStory from './button.stories.md';
+
 storiesOf('Components/Button', module)
   // .addDecorator(languageDecorator)
-  .addDecorator(withI18n)
   .addParameters({
-    info: 'Global story text'
+    // info: 'Global story text',
+    readme: {
+      // Show readme before story
+      content: ButtonStory,
+      // Show readme at the addons panel
+      sidebar: ButtonDocs
+    }
   })
   .add('with text', () => <Button content={text('Content', 'I am fancy!!!!!!')} />, {
-    info: `
-      **This is some text**
-
-      ~~~js
-      <Button>Click Here</Button>
-      ~~~
-      `
+    readme: {
+      content: `Overriden 1`,
+      sidebar: `Overriden 2`
+    }
   })
   .add('with some emoji', () => <Button content={text('Content', '😀 😎 👍 💯')} />);

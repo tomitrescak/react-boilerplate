@@ -15,7 +15,7 @@ export interface ButtonProps {
    */
   onClick?: (e: unknown) => void;
 }
-const FancyButton = styled.button`
+export const FancyButton = styled.button`
   border: 1px solid #eee;
   border-radius: 3px;
   background-color: white;

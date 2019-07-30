@@ -5,7 +5,7 @@ import { addDecorator } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
-
+import { addReadme } from 'storybook-readme';
 import { i18Decorator } from './addon-i18n/decorator';
 
 const req = require.context('../src/components', true, /.stories.tsx$/);
@@ -23,3 +23,4 @@ addDecorator(
 addDecorator(withA11y);
 addDecorator(withKnobs);
 addDecorator(i18Decorator);
+addDecorator(addReadme);
