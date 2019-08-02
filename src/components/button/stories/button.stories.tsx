@@ -9,7 +9,6 @@ import ButtonStory from './button.stories.md';
 
 export default {
   title: 'Components/Button',
-
   parameters: {
     // info: 'Global story text',
     readme: {
@@ -21,10 +20,10 @@ export default {
   }
 };
 
-export const WithText = () => <Button content={text('Content', 'I am fancy!!!!!!')} />;
+export const WithText = () => <Button content={text('Content', 'I am fancy!!!!!!!!')} />;
 
 WithText.story = {
-  name: 'with text',
+  name: 'with text 1',
   parameters: {
     readme: {
       content: `Overriden 1`,
