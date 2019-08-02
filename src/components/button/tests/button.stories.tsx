@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 
 import Button from '../button';
@@ -8,9 +7,10 @@ import Button from '../button';
 import ButtonDocs from './button.docs.md';
 import ButtonStory from './button.stories.md';
 
-storiesOf('Components/Button', module)
-  // .addDecorator(languageDecorator)
-  .addParameters({
+export default {
+  title: 'Components/Button',
+
+  parameters: {
     // info: 'Global story text',
     readme: {
       // Show readme before story
@@ -18,11 +18,23 @@ storiesOf('Components/Button', module)
       // Show readme at the addons panel
       sidebar: ButtonDocs
     }
-  })
-  .add('with text', () => <Button content={text('Content', 'I am fancy!!!!!!')} />, {
+  }
+};
+
+export const WithText = () => <Button content={text('Content', 'I am fancy!!!!!!')} />;
+
+WithText.story = {
+  name: 'with text',
+  parameters: {
     readme: {
       content: `Overriden 1`,
       sidebar: `Overriden 2`
     }
-  })
-  .add('with some emoji', () => <Button content={text('Content', '😀 😎 👍 💯')} />);
+  }
+};
+
+export const WithSomeEmoji = () => <Button content={text('Content', '😀 😎 👍 💯')} />;
+
+WithSomeEmoji.story = {
+  name: 'with some emoji'
+};

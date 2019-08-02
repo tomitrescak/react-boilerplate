@@ -8,11 +8,13 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { addReadme } from 'storybook-readme';
 import { i18Decorator } from './addon-i18n/decorator';
 
-const req = require.context('../src/components', true, /.stories.tsx$/);
-function loadStories() {
-  req.keys().forEach(req);
-}
-configure(loadStories, module);
+// const req = require.context('../src/components', true, /.stories.tsx$/);
+// function loadStories() {
+//   req.keys().forEach(req);
+// }
+// configure(loadStories, module);
+
+configure(require.context('../src/components', true, /.stories.tsx$/), module);
 
 addDecorator(
   withInfo({
