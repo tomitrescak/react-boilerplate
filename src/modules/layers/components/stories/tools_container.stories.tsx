@@ -1,24 +1,28 @@
 import React from 'react';
 
 import { action } from '@storybook/addon-actions';
-import { Story, Meta, Props, Source } from '@storybook/addon-docs/blocks';
-import { text } from '@storybook/addon-knobs';
-import { LayersTabs } from '../layers_tabs';
-import { array, number } from '@storybook/addon-knobs';
 import { ToolsContainer } from '../tools_container';
 import { LayersWrapper } from '../layers_container';
 
+import docs from './tools_container.docs.md';
+import marked from 'marked';
+import { Action } from 'config/common';
+
 export default {
-  title: 'Components|Layers/Tools1',
+  title: 'Components|Layers/Tools',
   parameters: {
     component: ToolsContainer,
+    info: marked(docs),
     // eslint-disable-next-line react/display-name
     decorators: [(storyFn: Function) => <LayersWrapper>{storyFn()}</LayersWrapper>]
-    // info: 'Global story text',
   }
 };
 
-export const DefaultView = () => <ToolsContainer setTool={action('setTool')} />;
+const setTool = action('setTool') as Action<string>;
+
+export const DefaultView = (setToolHandler = setTool) => (
+  <ToolsContainer setTool={setToolHandler} />
+);
 
 DefaultView.story = {
   name: 'default'

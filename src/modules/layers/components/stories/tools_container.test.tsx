@@ -1,11 +1,10 @@
-import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { ToolsContainer } from '../tools_container';
+import { DefaultView } from './tools_container.stories';
 
 describe('Tools View', () => {
   const setTool = jest.fn();
-  const tree = renderer.create(<ToolsContainer setTool={setTool} />);
+  const tree = renderer.create(DefaultView(setTool));
 
   it('renders default', () => {
     expect(tree).toMatchSnapshot();
