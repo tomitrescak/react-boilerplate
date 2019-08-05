@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styled from 'styled-components';
+import { styled } from 'config/common';
 
 import { useTranslation, Trans } from 'react-i18next';
 

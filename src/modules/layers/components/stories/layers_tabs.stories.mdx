@@ -3,12 +3,12 @@ import { Story, Meta, Props, Source } from '@storybook/addon-docs/blocks';
 import { text } from '@storybook/addon-knobs';
 import { LayersTabs } from '../layers_tabs';
 import { array, number } from '@storybook/addon-knobs';
-import { LayersContainer } from '../layers_container';
+import { LayersWrapper } from '../layers_container';
 
 <Meta 
   title='Components|Layers/Tabs' 
   component={LayersTabs} 
-  decorators={[(storyFn) => <LayersContainer>{storyFn()}</LayersContainer>]} 
+  decorators={[(storyFn) => <LayersWrapper>{storyFn()}</LayersWrapper>]} 
 />
 
 # Layer Tabs

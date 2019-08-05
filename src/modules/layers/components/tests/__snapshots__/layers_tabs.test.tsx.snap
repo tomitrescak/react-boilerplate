@@ -2,20 +2,20 @@
 
 exports[`Layer Tabs changes active tab by index 1`] = `
 <div
-  className="sc-bdVaJa bFvmKt"
+  className="css-3nrvn2"
 >
   <ul
-    className="sc-bwzfXH jFumDk"
+    className="css-pwofpt"
   >
     <li
-      className="sc-htpNat AUdfI"
+      className="css-47xbb6"
       data-tab={0}
       onClick={[Function]}
     >
       LAYERS
     </li>
     <li
-      className="active sc-htpNat AUdfI"
+      className="css-47xbb6 active"
       data-tab={1}
       onClick={[Function]}
     >
@@ -27,20 +27,20 @@ exports[`Layer Tabs changes active tab by index 1`] = `
 
 exports[`Layer Tabs renders default 1`] = `
 <div
-  className="sc-bdVaJa bFvmKt"
+  className="css-3nrvn2"
 >
   <ul
-    className="sc-bwzfXH jFumDk"
+    className="css-pwofpt"
   >
     <li
-      className="active sc-htpNat AUdfI"
+      className="css-47xbb6 active"
       data-tab={0}
       onClick={[Function]}
     >
       LAYERS
     </li>
     <li
-      className="sc-htpNat AUdfI"
+      className="css-47xbb6"
       data-tab={1}
       onClick={[Function]}
     >

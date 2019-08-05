@@ -4,12 +4,12 @@ import { text } from '@storybook/addon-knobs';
 import { LayersTabs } from '../layers_tabs';
 import { array, number } from '@storybook/addon-knobs';
 import { ToolsContainer } from '../tools_container';
-import { LayersContainer } from '../layers_container';
+import { LayersWrapper } from '../layers_container';
 
 <Meta 
   title='Components|Layers/Tools' 
   component={ToolsContainer} 
-  decorators={[(storyFn) => <LayersContainer>{storyFn()}</LayersContainer>]} 
+  decorators={[(storyFn) => <LayersWrapper>{storyFn()}</LayersWrapper>]} 
 />
 
 # Tools
@@ -19,9 +19,11 @@ Set of tools to operate pane content (e.g. layers)
 ### Example
 
 <Story name="first selected">
-  <ToolsContainer />
+  <ToolsContainer setTool={action('setTool')} />
 </Story>
 
 ### Props
 
 <Props of={ToolsContainer} />
+
+

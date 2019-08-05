@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { classes, styled, Action, numberAttribute } from 'config/common';
+import { classes, styled, Action, numberAttribute, theme } from 'config/common';
 
 const LayerHeader = styled.div`
   width: 100%;
@@ -23,8 +23,8 @@ const LayerItem = styled.li`
   height: 100%;
   align-items: center;
   color: rgba(255, 255, 255, 0.4);
-  border-left: 1px solid ${props => props.theme.paneBackground};
-  border-right: 1px solid ${props => props.theme.divider};
+  border-left: 1px solid ${theme.paneBackground};
+  border-right: 1px solid ${theme.divider};
   cursor: pointer;
   display: flex;
   font-size: 11px;
@@ -37,12 +37,12 @@ const LayerItem = styled.li`
   &:hover,
   &.active {
     background-color: rgba(77, 77, 77, 0.17);
-    border-left-color: ${props => props.theme.divider};
+    border-left-color: ${theme.divider};
   }
   &.active {
     border-right-color: transparent;
     border-left: 1px solid rgba(77, 77, 77, 0.17);
-    color: ${props => props.theme.paneText};
+    color: ${theme.paneText};
   }
 `;
 

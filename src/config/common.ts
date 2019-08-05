@@ -1,10 +1,14 @@
-import baseStyled from '@emotion/styled/macro';
-import { defaultTheme } from '../themes/default';
+// import baseStyled from '@emotion/styled/macro';
+// import { defaultTheme } from '../themes/default';
 
 // styleed components
 
-export type Theme = typeof defaultTheme;
-export const styled = baseStyled; // as ThemedStyledInterface<Theme>;
+// export { css } from 'emotion';
+// export type Theme = typeof defaultTheme;
+// export const styled = baseStyled; // as ThemedStyledInterface<Theme>;
+export { defaultTheme as theme } from '../themes/default';
+
+export { styled } from './styling';
 
 // classnames
 export { default as classes } from 'classnames';

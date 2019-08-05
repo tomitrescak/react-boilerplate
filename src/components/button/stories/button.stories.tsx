@@ -4,9 +4,6 @@ import { text } from '@storybook/addon-knobs';
 
 import Button from '../button';
 
-import ButtonDocs from './button.docs.md';
-import ButtonStory from './button.stories.md';
-
 export default {
   title: 'Demo|Components/Button Classic',
   parameters: {
@@ -14,9 +11,9 @@ export default {
     // info: 'Global story text',
     readme: {
       // Show readme before story
-      content: ButtonStory,
+      content: 'Base 1',
       // Show readme at the addons panel
-      sidebar: ButtonDocs
+      sidebar: 'Base 2'
     }
   }
 };

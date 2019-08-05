@@ -4,7 +4,7 @@ exports[`Button Renders with text 1`] = `
 Array [
   <div />,
   <button
-    className="sc-bdVaJa jyKrJs"
+    className="css-mkpa4l"
   >
     My Button
   </button>,

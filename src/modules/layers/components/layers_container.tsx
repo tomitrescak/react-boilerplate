@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import { styled, theme } from 'config/common';
 
-import { defaultTheme } from 'themes/default';
-
-export const LayersContainer = styled.div`
+export const LayersWrapper = styled.div`
   width: 300px;
   max-height: 60vh;
-  background-color: ${props => props.theme.paneBackground};
+  background: ${theme.paneBackground};
+  background-color: ${theme.paneBackground};
   display: flex;
   flex-direction: column;
+  label: LayerContainer;
 `;
 
-LayersContainer.displayName = 'LayersContainer';
-LayersContainer.defaultProps = { theme: defaultTheme };
+LayersWrapper.displayName = 'LayersContainer';
