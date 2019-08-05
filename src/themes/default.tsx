@@ -1,5 +1,10 @@
+import './global.css';
+
 export let defaultTheme = {
   paneBackground: '#1F212B',
+  divider: '#000000',
+  paneText: '#FFFFFF',
+  paneActive: '#000000',
 
   bittersweet: '#FF6565',
   black: '#000000',

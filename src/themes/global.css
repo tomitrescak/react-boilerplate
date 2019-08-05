@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900');
+@import url('https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/react-datepicker/2.5.0/react-datepicker.min.css');
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+body b {
+  font-weight: bold;
+}
+body .root {
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+body .root .ol-overlaycontainer-stopevent {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  padding: 4px 4px 6px 4px;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+body .root .ol-overlaycontainer-stopevent.ol-datatable-active {
+  bottom: 2.5rem;
+}
+body .root .ol-overlaycontainer-stopevent .ol-control {
+  padding: 0;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+}
+body .root .ol-overlaycontainer-stopevent .ol-control + .ol-control button {
+  margin-top: 12px;
+  position: relative;
+}
+body .root .ol-overlaycontainer-stopevent .ol-control + .ol-control button:after {
+  content: '';
+  width: calc(100% + 12px);
+  height: 1px;
+  background: rgba(112, 112, 112, 0.2);
+  position: absolute;
+  left: -6px;
+  top: -7px;
+}
+body .root .ol-overlaycontainer-stopevent button {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #f4f5f4;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 100px;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-weight: normal;
+  justify-content: center;
+  margin: 0 auto;
+  outline: 0;
+  transition: background-color 0.2 ease-out;
+  -o-transition: background-color 0.2 ease-out;
+  -moz-transition: background-color 0.2 ease-out;
+  -webkit-transition: background-color 0.2 ease-out;
+}
+body .root .ol-overlaycontainer-stopevent button:hover {
+  background-color: #f4f5f4;
+}
+body .root .ol-overlaycontainer-stopevent button + button {
+  margin-top: 12px;
+  position: relative;
+}
+body .root .ol-overlaycontainer-stopevent button + button:after {
+  content: '';
+  width: calc(100% + 12px);
+  height: 1px;
+  background: rgba(112, 112, 112, 0.2);
+  position: absolute;
+  left: -6px;
+  top: -6px;
+}
+body .root .ol-overlaycontainer-stopevent button.ol-zoom-in {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4LjI3MiIgaGVpZ2h0PSI4LjI3MSI+PHBhdGggZD0iTTcuODU4IDQuNTV2LS44MjhINC41NVYuNDE1aC0uODI4djMuMzA5SC40MTR2LjgyN2gzLjMwOXYzLjMwOGguODI3TDQuNTQ5IDQuNTV6IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=');
+}
+body .root .ol-overlaycontainer-stopevent button.ol-zoom-out {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4LjI3MSIgaGVpZ2h0PSI4LjI3MSI+PHBhdGggZD0iTS40MTQgMy43MjJ2LjgyOGg3LjQ0NXYtLjgyOGgtMy4zMXoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==');
+}
+body .root .ol-overlaycontainer-stopevent button.ol-search {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4Ljc0NCIgaGVpZ2h0PSI4Ljc0NCI+PHBhdGggZGF0YS1uYW1lPSJQYXRoIDEwNDE3MyIgZD0iTTguMzAxIDcuOTcyTDYuMTM3IDUuODA4YTMuMjkyIDMuMjkyIDAgMSAwLS4zMjkuMzI5bDIuMTY0IDIuMTY0YS4yMzMuMjMzIDAgMSAwIC4zMjktLjMyOXpNLjg0IDMuNjU5YTIuODE5IDIuODE5IDAgMSAxIDIuODE5IDIuODE5QTIuODIyIDIuODIyIDAgMCAxIC44NCAzLjY1OXoiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIuNzUiLz48L3N2Zz4=');
+}
+body .root .ol-overlaycontainer-stopevent button.ol-layer-change {
+  background-image: url('https://deliverytestdata.blob.core.windows.net/deliverytest/gmaps-icon.jpg');
+  border-radius: 0;
+}
+body .modal-overlay {
+  background-color: rgba(24, 31, 37, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body .pointer {
+  cursor: pointer;
+}
+body .close_modal {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body .project--menu--tooltip {
+  width: 250px;
+  background-color: rgba(31, 33, 43, 0.97) !important;
+  border: 1px solid #2e2e2e !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+  z-index: 100;
+}
+body .project--menu--tooltip.show {
+  opacity: 1 !important;
+}
+body .project--menu--tooltip:after {
+  border-bottom-color: rgba(31, 33, 43, 0.97) !important;
+}
+body .tooltipcover {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+body .layer--tooltip--options {
+  width: 180px;
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border: none !important;
+  opacity: 0 !important;
+  margin-right: 15px !important;
+  padding: 0 !important;
+  z-index: 100;
+}
+body .layer--tooltip--options.show {
+  opacity: 1 !important;
+}
+body .layer--tooltip--options:after {
+  border-bottom: 10px solid transparent !important;
+  border-right-color: rgba(255, 255, 255, 0.96) !important;
+  border-right-width: 8px;
+  border-top: 10px solid transparent !important;
+  left: -6px !important;
+  top: 48.5% !important;
+}
+body .react-datepicker-popper {
+  z-index: 100;
+}
+body .timeline__input__range {
+  width: 105px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 0px;
+  text-align: center;
+}
+body .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+body .ReactModal__Overlay.ReactModal__Overlay--black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+body .ReactModal__Content {
+  outline: none;
+}
+body .ReactModal__Content.ReactModal__LoadingModal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

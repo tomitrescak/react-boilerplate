@@ -1,0 +1,28 @@
+import { action } from '@storybook/addon-actions';
+import { Button } from '../button';
+import { Story, Meta, Props, Source } from '@storybook/addon-docs/blocks';
+import { text } from '@storybook/addon-knobs';
+
+<Meta title='Demo|Components/Button Mdx' component={Button} />
+
+# Hello Docs
+
+Welcome to the future of Storybook!
+
+<Story name="hello">
+  <Button onClick={action('clicked')} content={text("Content", "Hello button!!!")} parameters={{component: Button}} />
+</Story>
+
+## Source
+
+```js
+var m = 0;
+```
+
+## Props
+
+<Props of={Button} />
+
+<Story name="with emoji">
+  <Button onClick={action('clicked')} content="🤘🚀💯" />
+</Story>

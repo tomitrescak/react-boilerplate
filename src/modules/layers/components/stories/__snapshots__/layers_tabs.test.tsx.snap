@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layer Tabs changes active tab by index 1`] = `
+<div
+  className="sc-bdVaJa bFvmKt"
+>
+  <ul
+    className="sc-bwzfXH jFumDk"
+  >
+    <li
+      className="sc-htpNat AUdfI"
+      data-tab={0}
+      onClick={[Function]}
+    >
+      LAYERS
+    </li>
+    <li
+      className="active sc-htpNat AUdfI"
+      data-tab={1}
+      onClick={[Function]}
+    >
+      INDICATORS
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Layer Tabs renders default 1`] = `
+<div
+  className="sc-bdVaJa bFvmKt"
+>
+  <ul
+    className="sc-bwzfXH jFumDk"
+  >
+    <li
+      className="active sc-htpNat AUdfI"
+      data-tab={0}
+      onClick={[Function]}
+    >
+      LAYERS
+    </li>
+    <li
+      className="sc-htpNat AUdfI"
+      data-tab={1}
+      onClick={[Function]}
+    >
+      INDICATORS
+    </li>
+  </ul>
+</div>
+`;

@@ -8,8 +8,9 @@ import ButtonDocs from './button.docs.md';
 import ButtonStory from './button.stories.md';
 
 export default {
-  title: 'Components/Button',
+  title: 'Demo|Components/Button Classic',
   parameters: {
+    component: Button,
     // info: 'Global story text',
     readme: {
       // Show readme before story

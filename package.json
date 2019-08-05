@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/cli": "^5.2.0-beta.22",
+    "classnames": "^2.2.6",
     "i18next": "^17.0.6",
     "i18next-browser-languagedetector": "^3.0.1",
     "react": "^16.8.6",
@@ -36,9 +38,11 @@
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^5.1.9",
+    "@storybook/addon-docs": "^5.2.0-beta.22",
     "@storybook/addon-info": "^5.2.0-beta.17",
     "@storybook/addon-knobs": "^5.1.9",
-    "@storybook/react": "^5.2.0-beta.18",
+    "@storybook/react": "^5.2.0-beta.22",
+    "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.15",
     "@types/node": "12.6.8",
     "@types/react": "16.8.23",
