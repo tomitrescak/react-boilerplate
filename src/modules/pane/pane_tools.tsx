@@ -86,9 +86,10 @@ export const ToolsContainer: FC<Props> = ({ setTool, tools = defaultTools }) => 
           key={t.name}
           className={classes({ active: tool === t.name })}
           data-tool={t.name}
+          title={t.name}
           onClick={setToolHandler}
         >
-          <ToolIcon src={t.icon} />
+          <ToolIcon src={t.icon} alt={t.name} />
         </ToolItem>
       ))}
     </ToolsList>

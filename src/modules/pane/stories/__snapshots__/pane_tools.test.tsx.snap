@@ -54,128 +54,43 @@ exports[`Tools View renders default 1`] = `
   width: 18px;
 }
 
-<ul
-  className="emotion-6"
->
-  <li
-    className="active emotion-1"
-    data-tool="select"
-    onClick={[Function]}
+<div>
+  <ul
+    class="emotion-6"
   >
-    <img
-      className="emotion-0"
-      src="https://deliverytestdata.blob.core.windows.net/deliverytest/cursor.svg"
-    />
-  </li>
-  <li
-    className=" emotion-1"
-    data-tool="edit"
-    onClick={[Function]}
-  >
-    <img
-      className="emotion-0"
-      src="https://deliverytestdata.blob.core.windows.net/deliverytest/pluma.svg"
-    />
-  </li>
-  <li
-    className=" emotion-1"
-    data-tool="measure"
-    onClick={[Function]}
-  >
-    <img
-      className="emotion-0"
-      src="https://deliverytestdata.blob.core.windows.net/deliverytest/measure.svg"
-    />
-  </li>
-</ul>
-`;
-
-exports[`Tools View selects another item and calls a callback function 1`] = `
-.emotion-6 {
-  width: 100%;
-  height: 40px;
-  min-height: 40px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid #000000;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-.emotion-1 {
-  width: 40px;
-  height: 30px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: 1px solid #000000;
-  border-radius: 2px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-left: 10px;
-}
-
-.emotion-1:hover,
-.emotion-1.active {
-  background-color: #000000;
-}
-
-.emotion-1 .icon {
-  width: 18px;
-}
-
-.emotion-0 {
-  width: 18px;
-}
-
-<ul
-  className="emotion-6"
->
-  <li
-    className=" emotion-1"
-    data-tool="select"
-    onClick={[Function]}
-  >
-    <img
-      className="emotion-0"
-      src="https://deliverytestdata.blob.core.windows.net/deliverytest/cursor.svg"
-    />
-  </li>
-  <li
-    className="active emotion-1"
-    data-tool="edit"
-    onClick={[Function]}
-  >
-    <img
-      className="emotion-0"
-      src="https://deliverytestdata.blob.core.windows.net/deliverytest/pluma.svg"
-    />
-  </li>
-  <li
-    className=" emotion-1"
-    data-tool="measure"
-    onClick={[Function]}
-  >
-    <img
-      className="emotion-0"
-      src="https://deliverytestdata.blob.core.windows.net/deliverytest/measure.svg"
-    />
-  </li>
-</ul>
+    <li
+      class="active emotion-1"
+      data-tool="select"
+      title="select"
+    >
+      <img
+        alt="select"
+        class="emotion-0"
+        src="https://deliverytestdata.blob.core.windows.net/deliverytest/cursor.svg"
+      />
+    </li>
+    <li
+      class=" emotion-1"
+      data-tool="edit"
+      title="edit"
+    >
+      <img
+        alt="edit"
+        class="emotion-0"
+        src="https://deliverytestdata.blob.core.windows.net/deliverytest/pluma.svg"
+      />
+    </li>
+    <li
+      class=" emotion-1"
+      data-tool="measure"
+      title="measure"
+    >
+      <img
+        alt="measure"
+        class="emotion-0"
+        src="https://deliverytestdata.blob.core.windows.net/deliverytest/measure.svg"
+      />
+    </li>
+  </ul>
+</div>
 `;

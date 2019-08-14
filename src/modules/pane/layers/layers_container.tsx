@@ -2,7 +2,12 @@ import React from 'react';
 import { LayerItem } from './layer_item';
 import { PaneContainer } from '../pane_container';
 
-export const LayersContainer = ({ groups, openComments }) => {
+type Props = {
+  groups: any;
+  openComments: any;
+};
+
+export const LayersContainer: React.FC<Props> = ({ groups, openComments }) => {
   const zoomToLayer = React.useCallback((layer: any) => {
     console.log(layer);
   }, []);

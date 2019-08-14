@@ -68,7 +68,6 @@
     "storybook-readme": "^5.0.5"
   },
   "jest": {
-    "globalSetup": "./config/jest.js",
     "snapshotSerializers": [
       "jest-emotion"
     ]

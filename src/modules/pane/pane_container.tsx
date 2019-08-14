@@ -11,16 +11,3 @@ export const PaneContainer = styled.div`
 `;
 
 PaneContainer.displayName = 'PaneContainer';
-
-// const tabs = ['LAYERS', 'INDICATORS'];
-
-// export const PaneContainer = () => {
-//   const [tab, setTab] = React.useState(0);
-//   const stub: any = () => {};
-//   return (
-//     <LayersWrapper>
-//       <PaneTabs tabs={tabs} currentTab={tab} setTab={setTab} />
-//       <ToolsContainer setTool={stub} />
-//     </LayersWrapper>
-//   );
-// };
