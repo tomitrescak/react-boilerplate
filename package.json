@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/styled": "^10.0.15",
     "@storybook/cli": "^5.2.0-beta.22",
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^9.1.1",
     "@types/marked": "^0.6.5",
     "classnames": "^2.2.6",
     "i18next": "^17.0.6",
     "i18next-browser-languagedetector": "^3.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.1",
+    "mobx-state-tree": "^3.14.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-i18next": "^10.11.4",
     "react-scripts": "3.0.1",
     "typescript": "3.5.3"
@@ -55,13 +61,16 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "jest-emotion": "^10.0.14",
     "marked": "^0.7.0",
     "react-docgen-typescript-loader": "^3.1.0",
-    "react-test-renderer": "^16.8.6",
     "storybook-addon-i18n": "^5.1.9",
     "storybook-readme": "^5.0.5"
   },
   "jest": {
-    "globalSetup": "./config/jest.js"
+    "globalSetup": "./config/jest.js",
+    "snapshotSerializers": [
+      "jest-emotion"
+    ]
   }
 }

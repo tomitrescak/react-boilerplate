@@ -1,16 +1,16 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { LayersTabs } from '../layers_tabs';
+import { PaneTabs } from '../pane_tabs';
 import { array, number } from '@storybook/addon-knobs';
-import { LayersWrapper } from '../layers_container';
+import { PaneContainer } from '../pane_container';
 import { Action } from 'config/common';
 
 export default {
-  title: 'Components|Layers/Tabs',
+  title: 'Components|Pane/Tabs',
   parameters: {
-    component: LayersTabs,
+    component: PaneTabs,
     // eslint-disable-next-line react/display-name
-    decorators: [(storyFn: Function) => <LayersWrapper>{storyFn()}</LayersWrapper>]
+    decorators: [(storyFn: Function) => <PaneContainer>{storyFn()}</PaneContainer>]
   }
 };
 
@@ -19,7 +19,7 @@ const storyProps = {
 };
 
 export const DefaultView = ({ setTab } = storyProps) => (
-  <LayersTabs
+  <PaneTabs
     currentTab={number('ActiveTab', 0)}
     setTab={setTab}
     tabs={array('Tabs', ['LAYERS', 'INDICATORS'])}
@@ -31,7 +31,7 @@ DefaultView.story = {
 };
 
 export const SelectedView = ({ setTab } = storyProps) => (
-  <LayersTabs currentTab={1} setTab={setTab} tabs={['LAYERS', 'INDICATORS']} />
+  <PaneTabs currentTab={1} setTab={setTab} tabs={['LAYERS', 'INDICATORS']} />
 );
 
 SelectedView.story = {

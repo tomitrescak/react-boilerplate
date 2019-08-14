@@ -43,11 +43,17 @@ const ToolIcon = styled.img`
 `;
 ToolIcon.displayName = 'ToolIcon';
 
-type Props = {
-  setTool: Action<string>;
+type Tool = {
+  name: string;
+  icon: string;
 };
 
-const tools = [
+type Props = {
+  setTool: Action<string>;
+  tools?: Tool[];
+};
+
+const defaultTools = [
   {
     name: 'select',
     icon: 'https://deliverytestdata.blob.core.windows.net/deliverytest/cursor.svg'
@@ -62,8 +68,8 @@ const tools = [
   }
 ];
 
-export const ToolsContainer: FC<Props> = ({ setTool }) => {
-  const [tool, setToolActive] = React.useState('select');
+export const ToolsContainer: FC<Props> = ({ setTool, tools = defaultTools }) => {
+  const [tool, setToolActive] = React.useState(tools[0].name);
   const setToolHandler = React.useCallback(
     (e: React.MouseEvent<HTMLLIElement>) => {
       const tool = stringAttribute(e.currentTarget, 'data-tool');

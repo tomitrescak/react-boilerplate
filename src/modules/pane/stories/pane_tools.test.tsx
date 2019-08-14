@@ -1,6 +1,6 @@
-import renderer from 'react-test-renderer';
+import { render } from 'react-test-renderer';
 
-import { DefaultView } from './tools_container.stories';
+import { DefaultView } from './pane_tools.stories';
 
 describe('Tools View', () => {
   const setTool = jest.fn();

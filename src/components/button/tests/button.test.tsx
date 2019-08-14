@@ -1,11 +1,15 @@
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import React from 'react';
 
 import { Button } from '../button';
 
+import serializer from 'jest-emotion';
+
+expect.addSnapshotSerializer(serializer);
+
 describe('Button', () => {
   it('Renders with text', () => {
-    const tree = renderer.create(<Button content="My Button" />);
-    expect(tree).toMatchSnapshot();
+    const { container } = render(<Button content="My Button" />);
+    expect(container).toMatchSnapshot();
   });
 });

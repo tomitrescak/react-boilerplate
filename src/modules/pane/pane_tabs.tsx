@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { classes, styled, Action, numberAttribute, theme } from 'config/common';
 
-const LayerHeader = styled.div`
+const TabsContainer = styled.div`
   width: 100%;
   height: 40px;
   min-height: 40px;
@@ -11,7 +11,7 @@ const LayerHeader = styled.div`
   justify-content: center;
 `;
 
-const LayerList = styled.ul`
+const TabsList = styled.ul`
   width: 100%;
   height: 100%;
   align-items: center;
@@ -19,7 +19,7 @@ const LayerList = styled.ul`
   justify-content: flex-start;
 `;
 
-const LayerItem = styled.li`
+const TabItem = styled.li`
   height: 100%;
   align-items: center;
   color: rgba(255, 255, 255, 0.4);
@@ -65,7 +65,7 @@ type Props = {
 
 const defaultTabs = ['LAYERS', 'INDICATORS'];
 
-export const LayersTabs: FC<Props> = ({ currentTab = 0, setTab, tabs = defaultTabs }) => {
+export const PaneTabs: FC<Props> = ({ currentTab = 0, setTab, tabs = defaultTabs }) => {
   const setActiveTab = React.useCallback(
     (e: React.MouseEvent<HTMLLIElement>) => {
       setTab(numberAttribute(e.currentTarget, 'data-tab'));
@@ -75,20 +75,20 @@ export const LayersTabs: FC<Props> = ({ currentTab = 0, setTab, tabs = defaultTa
 
   return (
     <>
-      <LayerHeader>
-        <LayerList>
+      <TabsContainer>
+        <TabsList>
           {tabs.map((tab, i) => (
-            <LayerItem
+            <TabItem
               key={i}
               className={classes({ active: currentTab === i })}
               data-tab={i}
               onClick={setActiveTab}
             >
               {tab}
-            </LayerItem>
+            </TabItem>
           ))}
-        </LayerList>
-      </LayerHeader>
+        </TabsList>
+      </TabsContainer>
     </>
   );
 };

@@ -1,12 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Tools View renders default 1`] = `
-<div
-  className="css-1i42z24-LayerContainer"
->
-  <div>
-    Tabs
-  </div>
+<div>
   <div>
     Tools
   </div>

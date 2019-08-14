@@ -31,3 +31,12 @@ export const styled: typeof styledBase = {
   a: init('a'),
   span: init('span')
 } as any;
+
+// styled components
+
+// import baseStyled from '@emotion/styled/macro';
+// import { defaultTheme } from '../themes/default';
+
+// export { css } from 'emotion';
+// export type Theme = typeof defaultTheme;
+// export const styled = baseStyled; // as ThemedStyledInterface<Theme>;

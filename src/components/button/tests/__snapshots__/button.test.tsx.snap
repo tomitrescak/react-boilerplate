@@ -1,15 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button Renders with text 1`] = `
-Array [
-  <div />,
+.emotion-0 {
+  border: 1px solid #eee;
+  border-radius: 3px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 3px 10px;
+  margin: 10px;
+}
+
+<div>
+  <div />
   <button
-    className="css-mkpa4l"
+    class="emotion-0"
   >
     My Button
-  </button>,
+  </button>
   <div>
     subTitle
-  </div>,
-]
+  </div>
+</div>
 `;
