@@ -3,6 +3,8 @@ import { styled } from 'config/common';
 
 import { useTranslation, Trans } from 'react-i18next';
 
+import * as r from 'react-i18next';
+
 export interface ButtonProps {
   /**
    * Text of the button
@@ -28,6 +30,7 @@ export const FancyButton = styled.button`
 export const Button: FC<ButtonProps> = props => {
   // you can use hook for the translation
   // https://react.i18next.com/latest/usetranslation-hook
+  console.log(r);
   const { t } = useTranslation();
   return (
     <>

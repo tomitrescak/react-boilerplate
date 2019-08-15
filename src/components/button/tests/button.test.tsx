@@ -4,7 +4,7 @@ import React from 'react';
 import { Button } from '../button';
 
 describe('Button', () => {
-  it('Renders with text', () => {
+  it.only('Renders with text', () => {
     const { container } = render(<Button content="My Button" />);
     expect(container).toMatchSnapshot();
   });

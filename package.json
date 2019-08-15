@@ -16,7 +16,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-i18next": "^10.12.2",
-    "react-scripts": "3.1.1",
+    "react-scripts": "^3.1.1",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -60,8 +60,5 @@
     "marked": "^0.7.0",
     "react-docgen-typescript-loader": "^3.1.1",
     "storybook-addon-i18n": "^5.1.9"
-  },
-  "jest": {
-    "globalSetup": "./config/jest.js"
   }
 }
