@@ -6,10 +6,7 @@ export type Func<T, U> = (param: T) => U;
 // styles
 
 export { defaultTheme as theme } from '../themes/default';
-import { styled as debugStyled } from './styling';
-import styledEmotion from '@emotion/styled';
-
-export const styled = process.env.NODE_ENV === 'development' ? debugStyled : styledEmotion;
+export { styled } from './styling';
 
 // hooks
 

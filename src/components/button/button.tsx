@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import { styled } from 'config/common';
 
 import { useTranslation, Trans } from 'react-i18next';
-import { css } from 'emotion';
 
 export interface ButtonProps {
   /**

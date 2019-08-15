@@ -14,6 +14,10 @@ Each visual sprint item is considered done, only if it contains:
 - integration tests of all **external / API** calls
 - e2e tests with integrated component
 
+## Testing Info
+
+Please Read the Following Guide: https://github.com/goldbergyoni/javascript-testing-best-practices
+
 # Create React App Info
 
 ## Available Scripts

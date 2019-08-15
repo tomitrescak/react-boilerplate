@@ -46,17 +46,14 @@ const TabItem = styled.li`
   }
 `;
 
+const Tab = styled.div`
+  display: none;
+  &.active {
+    display: block;
+  }
+`;
+
 type Props = {
-  /**
-   * Id of the current tab
-   *
-   * @default 0
-   */
-  currentTab?: number;
-  /**
-   * Callback for setting the active tab
-   */
-  setTab: Action<number>;
   /**
    * List of tabs to display
    */
@@ -65,7 +62,9 @@ type Props = {
 
 const defaultTabs = ['LAYERS', 'INDICATORS'];
 
-export const PaneTabs: FC<Props> = ({ currentTab = 0, setTab, tabs = defaultTabs }) => {
+export const PaneTabs: FC<Props> = ({ children, tabs = defaultTabs }) => {
+  const [currentTab, setTab] = React.useState(0);
+
   const setActiveTab = React.useCallback(
     (e: React.MouseEvent<HTMLLIElement>) => {
       setTab(numberAttribute(e.currentTarget, 'data-tab'));
@@ -74,7 +73,7 @@ export const PaneTabs: FC<Props> = ({ currentTab = 0, setTab, tabs = defaultTabs
   );
 
   return (
-    <>
+    <div>
       <TabsContainer>
         <TabsList>
           {tabs.map((tab, i) => (
@@ -89,6 +88,13 @@ export const PaneTabs: FC<Props> = ({ currentTab = 0, setTab, tabs = defaultTabs
           ))}
         </TabsList>
       </TabsContainer>
-    </>
+      {children &&
+        Array.isArray(children) &&
+        children.map((child, i) => (
+          <Tab key={i} className={classes({ active: currentTab === i })}>
+            {child}
+          </Tab>
+        ))}
+    </div>
   );
 };

@@ -178,11 +178,11 @@ export const LayerItem: FC<Props> = ({ visible, layers, folderName }) => {
   });
 
   const updateGroupVisible = React.useCallback(() => {
-    layers.map((layer: any, key: number) => {
+    layers.forEach((layer: any, key: number) => {
       layer.item.setVisible(!state.groupVisible);
     });
     let visibleLayers = state.layers;
-    visibleLayers.map((layer: any, key: number) => {
+    visibleLayers.forEach((layer: any, key: number) => {
       layer.visible = !state.groupVisible;
     });
     setState({ groupVisible: !state.groupVisible, layers: visibleLayers });
@@ -198,11 +198,11 @@ export const LayerItem: FC<Props> = ({ visible, layers, folderName }) => {
     [setState, layers, state.layers]
   );
 
-  const downloadLayer = React.useCallback((_layer: Layer) => {
-    // Should open a modal with all dates
-    // window.open(layer.data.files[0].file, '_blank');
-    alert('Download');
-  }, []);
+  // const downloadLayer = React.useCallback((_layer: Layer) => {
+  //   // Should open a modal with all dates
+  //   // window.open(layer.data.files[0].file, '_blank');
+  //   alert('Download');
+  // }, []);
 
   const visibleClass = classes({ visible: state.groupVisible });
   const showClass = classes({ visible: state.groupVisible });

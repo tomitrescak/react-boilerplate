@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayerItem } from './layer_item';
-import { PaneContainer } from '../pane_container';
+import { PaneContainer } from '../pane/pane_container';
 
 type Props = {
   groups: any;

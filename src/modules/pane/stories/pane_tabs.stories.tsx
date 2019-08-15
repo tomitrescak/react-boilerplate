@@ -1,9 +1,9 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { PaneTabs } from '../pane_tabs';
-import { array, number } from '@storybook/addon-knobs';
+import { array } from '@storybook/addon-knobs';
 import { PaneContainer } from '../pane_container';
-import { Action } from 'config/common';
+import { Action, styled } from 'config/common';
 
 export default {
   title: 'Components|Pane/Tabs',
@@ -14,26 +14,22 @@ export default {
   }
 };
 
+const Tab = styled.div`
+  padding: 6px;
+  color: white;
+`;
+
 const storyProps = {
   setTab: action('setTab') as Action<number>
 };
 
 export const DefaultView = ({ setTab } = storyProps) => (
-  <PaneTabs
-    currentTab={number('ActiveTab', 0)}
-    setTab={setTab}
-    tabs={array('Tabs', ['LAYERS', 'INDICATORS'])}
-  />
+  <PaneTabs tabs={array('Tabs', ['LAYERS', 'INDICATORS'])}>
+    <Tab>Layers view</Tab>
+    <Tab>Indicators view</Tab>
+  </PaneTabs>
 );
 
 DefaultView.story = {
   name: 'first selected'
-};
-
-export const SelectedView = ({ setTab } = storyProps) => (
-  <PaneTabs currentTab={1} setTab={setTab} tabs={['LAYERS', 'INDICATORS']} />
-);
-
-SelectedView.story = {
-  name: 'second selected'
 };
